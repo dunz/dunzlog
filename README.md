@@ -2,7 +2,7 @@
 
 ## Stacks
 
-coding
+coding convention
 
 - eslint
 - prettier
