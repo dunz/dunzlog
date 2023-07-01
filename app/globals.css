@@ -19,3 +19,9 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+.input {
+  @apply rounded border-2 border-blue-950 p-2;
+}
+.button-primary {
+  @apply bg-cyan-500 text-white shadow-lg shadow-cyan-500/50 hover:opacity-70;
+}

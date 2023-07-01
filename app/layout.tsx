@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="w-full bg-white p-6">
           <div className="container mx-auto max-w-6xl items-center justify-between md:flex">
             <Link href="/" className="mb-2 block text-center text-lg font-bold text-black md:mb-0">
-              DJ Blog
+              Dunz Log
             </Link>
             <nav className="flex gap-6 md:text-right">
               <Link href="/" className="text-lg font-semibold text-black">
