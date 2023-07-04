@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillYoutube } from 'react-icons/ai';
 
+import MailForm from '@/app/contact/MailForm';
 import Container from '@/components/Container';
-import Profile from '@/components/Profile';
+
 const Contact: FC = () => {
   return (
     <Container className="items-center">
@@ -22,24 +23,7 @@ const Contact: FC = () => {
           </Link>
         </section>
       </section>
-      <form className="flex w-1/2 flex-col gap-5">
-        <legend className="self-center text-2xl">Send me an email</legend>
-        <fieldset className="flex flex-col gap-2">
-          <label htmlFor="email" className="font-bold">
-            Email
-          </label>
-          <input type="email" id="email" className="input" />
-        </fieldset>
-        <fieldset className="flex flex-col gap-2">
-          <label htmlFor="message" className="font-bold">
-            Message
-          </label>
-          <textarea id="message" className="input" />
-        </fieldset>
-        <button type="submit" className="button-primary w-full rounded p-5">
-          Send
-        </button>
-      </form>
+      <MailForm />
     </Container>
   );
 };
