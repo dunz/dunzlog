@@ -25,3 +25,6 @@ body {
 .button-primary {
   @apply bg-cyan-500 text-white shadow-lg shadow-cyan-500/50 hover:opacity-70;
 }
+.button-primary:disabled {
+  @apply cursor-not-allowed opacity-30 hover:opacity-30;
+}
