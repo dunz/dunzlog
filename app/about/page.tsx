@@ -5,7 +5,7 @@ import Profile from '@/components/Profile';
 
 const About: FC = () => {
   return (
-    <Container>
+    <Container className="flex flex-col items-center gap-10">
       <Profile />
       <article className="flex flex-col gap-5 rounded-lg bg-gray-200 p-10 text-center">
         <section>

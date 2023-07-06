@@ -7,7 +7,7 @@ export default function Home() {
   const postDataList = getPostDataList();
 
   return (
-    <Container>
+    <Container className="flex flex-col items-center gap-10">
       <Profile />
       <FeaturePost list={postDataList} />
     </Container>

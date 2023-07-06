@@ -7,7 +7,7 @@ import Container from '@/components/Container';
 
 const Contact: FC = () => {
   return (
-    <Container className="items-center">
+    <Container className="flex flex-col items-center gap-10">
       <h1 className="text-4xl">Contact Me</h1>
       <section>
         <p>zergcake@gmail.com</p>

@@ -7,7 +7,7 @@ tags: ['typescript']
 
 # Typescript 얕은 정리
 
-![typescript.png](../public/images/thumbnails/typescript.png)
+![typescript.png](/images/thumbnails/typescript.png)
 
 ## Config
 
