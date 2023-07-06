@@ -1,10 +1,10 @@
 import Container from '@/components/Container';
 import FeaturePost from '@/components/FeaturePost';
 import Profile from '@/components/Profile';
-import { getPostDataList } from '@/lib/posts';
+import { getSimplePostList } from '@/lib/posts';
 
 export default function Home() {
-  const postDataList = getPostDataList();
+  const postDataList = getSimplePostList();
 
   return (
     <Container className="flex flex-col items-center gap-10">

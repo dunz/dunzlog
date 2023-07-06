@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { PostData } from '@/models/post';
+import { SimplePost } from '@/models/post';
 
 type FeaturePostProps = {
-  list: PostData[];
+  list: SimplePost[];
 };
 
 const FeaturePost: FC<FeaturePostProps> = ({ list }) => {

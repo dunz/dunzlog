@@ -1,5 +1,5 @@
 ---
-title: '타입스크립트 얕은 정리'
+title: 'Typescript 얕은 정리'
 date: '2021-03-16'
 thumbnail: '/images/thumbnails/typescript.png'
 tags: ['typescript']
