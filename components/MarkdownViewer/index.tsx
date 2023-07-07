@@ -1,7 +1,9 @@
+'use client';
+
 import { FC } from 'react';
 import ReactMarkdown from 'react-markdown';
-// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import { materialOceanic } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { materialOceanic } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 type MarkdownViewerProps = {
   children: string;
@@ -16,20 +18,15 @@ const MarkdownViewer: FC<MarkdownViewerProps> = ({ children, className }) => {
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '');
 
-          return (
+          return !inline && match ? (
+            <SyntaxHighlighter {...props} style={materialOceanic} language={match[1]} PreTag="div">
+              {String(children).replace(/\n$/, '')}
+            </SyntaxHighlighter>
+          ) : (
             <code {...props} className={className}>
               {children}
             </code>
           );
-          // return !inline && match ? (
-          //   <SyntaxHighlighter {...props} style={materialOceanic} language={match[1]} PreTag="div">
-          //     {String(children).replace(/\n$/, '')}
-          //   </SyntaxHighlighter>
-          // ) : (
-          //   <code {...props} className={className}>
-          //     {children}
-          //   </code>
-          // );
         },
       }}
     >
