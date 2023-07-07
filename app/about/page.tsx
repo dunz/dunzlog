@@ -16,7 +16,7 @@ const About: FC = () => {
 
         <section>
           <h2 className="text-3xl">Career</h2>
-          <p className="text-sm">2012.04 ~ 현재</p>
+          <p className="text-sm">오래~~~전 ~ 현재</p>
           <p className="text-sm">프론트엔드 개발자로 일하고 있습니다.</p>
         </section>
 
