@@ -12,7 +12,7 @@ const PostCard: FC<PostCardProps> = ({ post: { id, date, title, thumbnail, tags 
   return (
     <Link
       href={`/posts/${id}`}
-      className="flex flex-col flex-wrap overflow-hidden break-words rounded-lg border-t-2 shadow-md hover:shadow-lg"
+      className="m-2 flex flex-col flex-wrap overflow-hidden break-words rounded-lg border-t-2 shadow-md hover:shadow-lg"
     >
       <Image src={thumbnail} alt="thumbnail" width={200} height={200} className="h-36 w-full border-b-2 shadow-sm" />
       <section className="flex w-full flex-col items-center gap-4 p-2">
