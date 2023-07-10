@@ -3,6 +3,7 @@ export type PostData = {
   title: string;
   thumbnail: string;
   tags: string[];
+  featured: boolean;
 };
 
 export type SimplePost = {

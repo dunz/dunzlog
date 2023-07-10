@@ -3,6 +3,7 @@ title: 'Typescript 얕은 정리'
 date: '2021-03-16'
 thumbnail: '/images/thumbnails/typescript.png'
 tags: ['typescript']
+featured: true
 ---
 
 # Typescript 얕은 정리
