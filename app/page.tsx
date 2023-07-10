@@ -10,6 +10,7 @@ export default function Home() {
     <Container className="flex flex-col items-center gap-10">
       <Profile />
       <FeaturePost list={postDataList} />
+      {/*<YouMayLike list={postDataList} />*/}
     </Container>
   );
 }

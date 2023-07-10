@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import { FC } from 'react';
 
+import PostCard from '@/components/PostCard';
 import { SimplePost } from '@/models/post';
 
 type FeaturePostProps = {
@@ -12,21 +11,10 @@ const FeaturePost: FC<FeaturePostProps> = ({ list }) => {
   return (
     <article>
       <h2 className="text-3xl">Featured Posts</h2>
-      <ul className="mt-2 grid grid-cols-4 gap-6">
-        {list?.map(({ id, date, title, thumbnail }) => (
-          <li key={id}>
-            <Link href={`/posts/${id}`} className="flex flex-col flex-wrap break-words">
-              <Image
-                src={thumbnail}
-                alt="thumbnail"
-                width={200}
-                height={200}
-                className="h-36 w-full rounded-lg object-cover shadow-md"
-              />
-              {title}
-              <br />
-              {date}
-            </Link>
+      <ul className="mt-2 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {list?.map((post) => (
+          <li key={post.id}>
+            <PostCard post={post} />
           </li>
         ))}
       </ul>
