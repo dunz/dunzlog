@@ -22,11 +22,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/" className="text-lg font-semibold text-black">
                 Home
               </Link>
-              <Link href="/about" className="text-lg font-semibold text-black">
-                About
-              </Link>
               <Link href="/posts" className="text-lg font-semibold text-black">
                 Posts
+              </Link>
+              <Link href="/about" className="text-lg font-semibold text-black">
+                About
               </Link>
               <Link href="/contact" className="text-lg font-semibold text-black">
                 Contact

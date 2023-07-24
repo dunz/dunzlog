@@ -7,10 +7,9 @@ type FeaturePostProps = {
   list: SimplePost[];
 };
 
-const FeaturePost: FC<FeaturePostProps> = ({ list }) => {
+const PostGrid: FC<FeaturePostProps> = ({ list }) => {
   return (
     <article>
-      <h2 className="text-3xl">Featured Posts</h2>
       <ul className="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {list?.map((post) => (
           <li key={post.id}>
@@ -22,4 +21,4 @@ const FeaturePost: FC<FeaturePostProps> = ({ list }) => {
   );
 };
 
-export default FeaturePost;
+export default PostGrid;

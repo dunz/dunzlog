@@ -1,5 +1,5 @@
 import Container from '@/components/Container';
-import FeaturePost from '@/components/FeaturePost';
+import PostGrid from '@/components/FeaturePost';
 import Profile from '@/components/Profile';
 import YouMayLike from '@/components/YouMayLike';
 import { getSimplePostList } from '@/lib/posts';
@@ -10,7 +10,10 @@ export default function Home() {
   return (
     <Container className="flex flex-col items-center gap-10">
       <Profile />
-      <FeaturePost list={postDataList} />
+      <section>
+        <h2 className="text-3xl">Featured Posts</h2>
+        <PostGrid list={postDataList} />
+      </section>
       <YouMayLike list={postDataList} />
     </Container>
   );

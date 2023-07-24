@@ -28,6 +28,9 @@ body {
 .button-primary:disabled {
   @apply cursor-not-allowed opacity-30 hover:opacity-30;
 }
+li {
+  @apply list-none;
+}
 pre {
   overflow: auto;
 }
