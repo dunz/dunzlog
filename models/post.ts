@@ -12,4 +12,6 @@ export type SimplePost = {
 
 export type DetailPost = {
   content: string;
+  prevPost: SimplePost | null;
+  nextPost: SimplePost | null;
 } & SimplePost;

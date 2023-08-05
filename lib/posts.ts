@@ -58,10 +58,16 @@ export async function getDetailPost(id: string): Promise<DetailPost> {
   const fileContents = fs.readFileSync(filePath, 'utf8');
 
   const { content, data } = matter(fileContents);
+  const fileList = getSimplePostList();
+  const currentIndex = fileList.findIndex((post) => post.id === id);
+  const prevPost = fileList[currentIndex + 1] || null;
+  const nextPost = fileList[currentIndex - 1] || null;
 
   return {
     id,
     content,
     ...(data as PostData),
+    prevPost,
+    nextPost,
   };
 }
