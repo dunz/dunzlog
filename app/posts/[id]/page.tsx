@@ -4,7 +4,7 @@ import { AiFillCalendar, AiFillTag } from 'react-icons/ai';
 import AdjacentPostCard from '@/components/AdjacentPostCard';
 import Container from '@/components/Container';
 import MarkdownViewer from '@/components/MarkdownViewer';
-import { getDetailPost } from '@/lib/posts';
+import { getDetailPost, getSimplePostList } from '@/lib/posts';
 
 type PostDetailProps = {
   params: {
@@ -18,6 +18,13 @@ export const generateMetadata = async ({ params: { id } }: PostDetailProps) => {
     title,
     description: `포스트 페이지: : ${title}`,
   };
+};
+
+export const generateStaticParams = () => {
+  const posts = getSimplePostList();
+  return posts.map(({ id }) => ({
+    id,
+  }));
 };
 
 const PostDetail: FC<PostDetailProps> = async ({ params: { id } }) => {

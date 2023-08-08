@@ -8,6 +8,7 @@ import { DetailPost, PostData, SimplePost } from '@/models/post';
 const postsDir = path.join(process.cwd(), 'posts');
 
 export function getSimplePostList(): SimplePost[] {
+  console.log('getSimplePostList');
   const fileNames = fs.readdirSync(postsDir);
 
   return fileNames
