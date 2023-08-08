@@ -12,9 +12,17 @@ type PostDetailProps = {
   };
 };
 
+export const generateMetadata = async ({ params: { id } }: PostDetailProps) => {
+  const { title } = await getDetailPost(id);
+  return {
+    title,
+    description: `포스트 페이지: : ${title}`,
+  };
+};
+
 const PostDetail: FC<PostDetailProps> = async ({ params: { id } }) => {
   const { content, date, tags, prevPost, nextPost } = await getDetailPost(id);
-  console.log(prevPost, nextPost);
+
   return (
     <Container className="flex flex-col gap-10">
       <MarkdownViewer className="max-w-none">{content}</MarkdownViewer>

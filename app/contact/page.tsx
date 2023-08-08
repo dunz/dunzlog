@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { FC } from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillYoutube } from 'react-icons/ai';
@@ -5,6 +6,10 @@ import { AiFillGithub, AiFillInstagram, AiFillYoutube } from 'react-icons/ai';
 import MailForm from '@/app/contact/MailForm';
 import Container from '@/components/Container';
 
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: '컨택트 페이지',
+};
 const Contact: FC = () => {
   return (
     <Container className="flex flex-col items-center gap-10">

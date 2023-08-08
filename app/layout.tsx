@@ -1,11 +1,15 @@
 import './globals.css';
+import { Metadata } from 'next';
 import { Nanum_Gothic } from 'next/font/google';
 import Link from 'next/link';
 
 const font = Nanum_Gothic({ subsets: ['latin'], weight: '400' });
 
-export const metadata = {
-  title: 'Dunz Log',
+export const metadata: Metadata = {
+  title: {
+    default: 'Dunz Log',
+    template: 'Dunz Log | %s',
+  },
   description: '알찬 정보를 쉽게 전달하기 위해 노력하는 개발자의 블로그입니다.',
 };
 

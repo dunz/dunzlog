@@ -1,8 +1,13 @@
+import { Metadata } from 'next';
 import { FC } from 'react';
 
 import Container from '@/components/Container';
 import Profile from '@/components/Profile';
 
+export const metadata: Metadata = {
+  title: 'About',
+  description: '어바웃 페이지',
+};
 const About: FC = () => {
   return (
     <Container className="flex flex-col items-center gap-10">
