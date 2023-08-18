@@ -2,12 +2,13 @@ import fs from 'fs';
 import path from 'path';
 
 import matter from 'gray-matter';
+import { cache } from 'react';
 
 import { DetailPost, PostData, SimplePost } from '@/models/post';
 
 const postsDir = path.join(process.cwd(), 'posts');
 
-export function getSimplePostList(): SimplePost[] {
+export const getSimplePostList = cache((): SimplePost[] => {
   console.log('getSimplePostList');
   const fileNames = fs.readdirSync(postsDir);
 
@@ -28,7 +29,7 @@ export function getSimplePostList(): SimplePost[] {
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
-}
+});
 
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDir);
